@@ -10,7 +10,7 @@ export default class Clusters {
         this._clusterTime = clusterTime;
     }
 
-    result(busy: Array<IClusterPeriod>): Array<IClusterPeriod> {
+    getEmpty(busy: Array<IClusterPeriod>): Array<IClusterPeriod> {
         const emptyPeriodsStack = this.getEmptyPeriodsStack(busy);
         const emptyClustersStack = this.getEmptyClusters(emptyPeriodsStack)
         return emptyClustersStack;

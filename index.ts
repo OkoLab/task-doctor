@@ -1,4 +1,4 @@
-import App from "./App";
+import Clusters from "./Clusters";
 import { IClusterPeriod } from "./Interfaces";
 
 const busy: Array<IClusterPeriod> = [
@@ -9,5 +9,5 @@ const busy: Array<IClusterPeriod> = [
     { start: "20:05", stop: "20:20" },
   ];
   
-const app = new App("09:00", "21:00", 30);
-console.log(app.result(busy));
+const clusters = new Clusters("09:00", "21:00", 30);
+console.log(clusters.getEmpty(busy));
